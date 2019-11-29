@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <title>Car</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li class="has-sub-menu"><a href="#">ABOUT</a>
+                <div class="sub-menu-wrapper">
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Team</a></li>
+                    <li><a href="#">Team 1</a></li>
+                    <li><a href="#">Team 2</a></li>
+                    <li><a href="#">Team 3</a></li>
+                    <li><a href="#">Team 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Business</a></li>
+                    <li><a href="#">Business 1</a></li>
+                    <li><a href="#">Business 2</a></li>
+                    <li><a href="#">Business 3</a></li>
+                    <li><a href="#">Business 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Timing</a></li>
+                    <li><a href="#">Timing 1</a></li>
+                    <li><a href="#">Timing 2</a></li>
+                    <li><a href="#">Timing 3</a></li>
+                    <li><a href="#">Timing 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Rules</a></li>
+                    <li><a href="#">Rule 1</a></li>
+                    <li><a href="#">Rule 2</a></li>
+                    <li><a href="#">Rule 3</a></li>
+                    <li><a href="#">Rule 4</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-sub-menu"><a href="#">PRODUCTS</a>
+                <div class="sub-menu-wrapper">
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Marques</a></li>
+                    <li><a href="#">modele 1</a></li>
+                    <li><a href="#">modele 2</a></li>
+                    <li><a href="#">modele 3</a></li>
+                    <li><a href="#">modele 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Food</a></li>
+                    <li><a href="#">Food 1</a></li>
+                    <li><a href="#">Food 2</a></li>
+                    <li><a href="#">Food 3</a></li>
+                    <li><a href="#">Food 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Cars</a></li>
+                    <li><a href="#">Car 1</a></li>
+                    <li><a href="#">Car 2</a></li>
+                    <li><a href="#">Car 3</a></li>
+                    <li><a href="#">Car 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Sports</a></li>
+                    <li><a href="#">Sports 1</a></li>
+                    <li><a href="#">Sports 2</a></li>
+                    <li><a href="#">Sports 3</a></li>
+                    <li><a href="#">Sports 4</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-sub-menu"><a href="#">OUR BLOG</a>
+                <div class="sub-menu-wrapper">
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Development</a></li>
+                    <li><a href="#">Development 1</a></li>
+                    <li><a href="#">Development 2</a></li>
+                    <li><a href="#">Development 3</a></li>
+                    <li><a href="#">Development 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Engineering</a></li>
+                    <li><a href="#">Engineering 1</a></li>
+                    <li><a href="#">Engineering 2</a></li>
+                    <li><a href="#">Engineering 3</a></li>
+                    <li><a href="#">Engineering 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Softwares</a></li>
+                    <li><a href="#">Software 1</a></li>
+                    <li><a href="#">Software 2</a></li>
+                    <li><a href="#">Software 3</a></li>
+                    <li><a href="#">Software 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>SEO</a></li>
+                    <li><a href="#">SEO 1</a></li>
+                    <li><a href="#">SEO 2</a></li>
+                    <li><a href="#">SEO 3</a></li>
+                    <li><a href="#">SEO 4</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul>
+          </nav>
+        
+          <div class="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        
+    </header>
+    <main>
+      <div class="container">
+        <div class="carousel">
+            <div class="carousel-prev"></div>
+            <div class="carousel-next"></div>
+            <ul class="carousel-pagination">
+                <li class="carousel-bullet"></li>
+                <li class="carousel-bullet"></li>
+                <li class="carousel-bullet"></li>
+                <li class="carousel-bullet"></li>
+                <li class="carousel-bullet"></li>
+            </ul>
+            <ul class="carousel-container">
+                <li class="carousel-item">
+                    <div class="item-1"></div>
+                </li>
+                <li class="carousel-item">
+                    <div class="item-2">1</div>
+                </li>
+                <li class="carousel-item">
+                    <div class="item-3">2</div>
+                </li>
+                <li class="carousel-item">
+                    <div class="item-4">3</div>
+                </li>
+                <li class="carousel-item">
+                    <div class="item-5">4</div>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, eveniet totam? Alias dolorem ullam autem asperiores similique illum soluta ipsa tempore inventore magni est modi architecto cum cumque, cupiditate illo.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam est rem officia corrupti iure debitis rerum totam aspernatur voluptas! Accusantium non placeat provident sunt eaque. Saepe sapiente quia veniam quas.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum est quia, nam obcaecati odit placeat, maxime error molestiae eum architecto tempora quam neque ex cupiditate? Perferendis deleniti aliquam fugit pariatur.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quaerat sapiente rem eos ipsa, necessitatibus libero, quas placeat, unde perferendis iusto iste. Nobis adipisci voluptate eaque fugiat animi magnam ratione.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem ea commodi ducimus veniam accusantium aut quidem. Non, molestias quisquam illum neque nam, fugiat sint vitae eius dolorem similique molestiae!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit provident rerum similique tempore recusandae esse architecto, deleniti nesciunt porro quis, dolor numquam quidem cum, neque laudantium ea id expedita.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi fugiat quae vitae odit! Iure aliquid dignissimos esse placeat nulla laudantium, autem mollitia, blanditiis, dolores error unde cupiditate cum voluptatem. Molestias.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptas rerum esse porro distinctio at voluptates, perspiciatis veniam autem. Commodi praesentium iusto officiis dolor minima a at accusamus labore libero!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis doloribus officiis repellendus optio consequatur modi quia temporibus, autem odit voluptatibus tenetur debitis eaque fugit ut dicta. Quibusdam, aut fugiat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsum fugit ut fugiat illum. Ex animi cumque, ducimus, totam maiores, dolore aliquam non dicta repellat fuga ipsam architecto fugit magni.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim debitis, aperiam natus sunt veritatis unde assumenda laboriosam placeat in repudiandae nihil optio ipsum iste aliquam, cupiditate beatae nam voluptatibus numquam!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, ratione ab iste molestias a cumque fuga saepe aliquid eius vel ex repellendus, est eos voluptate doloremque. Deserunt aperiam porro maiores?
+      </p>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script/index.js"></script>
+</body>
+</html>
