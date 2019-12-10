@@ -1,0 +1,327 @@
+
+
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box !important;
+  }
+  
+  ul li {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a, span {
+    display: inline-block;
+  }
+  
+  header {
+    height: 50px;
+    width: 100%;
+  }
+  .menu{
+    width: 100%;
+  }
+  .menu > ul {
+    background-color: #ff5722;
+    text-align: center;
+    position: relative;
+    font-size: 0; /* For removing the default margin between the inline-block elements if any. */
+  }
+  
+  .menu > ul > li {
+    background-color: #ff5722;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  ul li a {
+    color: #fff;
+    font-size: 16px;
+    display: block;
+  }
+  
+  ul li:hover a {
+    color: #333;
+  }
+  
+  /* .has-sub-menu > a {
+  position: relative;
+  } */
+  
+  .has-sub-menu > a::after {
+    content: '';
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  .has-sub-menu:hover > a::after {
+    border-top-color: #333;
+  }
+  
+  .sub-menu-wrapper {
+    position: absolute;
+    top: 65px;
+    left: -9999px;
+    background: #fff;
+    display: flex;
+    opacity: 0;
+    transition: top .5s, opacity .5s;
+    -webkit-transition: top .5s, opacity .5s;
+    -moz-transition: top .5s, opacity .5s;
+    -ms-transition: top .5s, opacity .5s;
+    -o-transition: top .5s, opacity .5s;
+  }
+  
+  .sub-menu {
+    padding: 20px 30px;
+    width: 25%;
+    text-align: left;
+  }
+  
+  .sub-menu-heading {
+    border-bottom: 1px solid #ff5722;
+    margin-bottom: 10px;
+    cursor: initial;
+  }
+  
+  .sub-menu a:hover {
+    color: #ff5722;
+  }
+  
+  .sub-menu-heading a:hover {
+    color: initial;
+  }
+  
+  .sub-menu-wrapper a {
+    color: #ff5722;
+  }
+  
+  .has-sub-menu:hover > .sub-menu-wrapper {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    top: 45px;
+  }
+  
+  
+  /* Hamburger Styling */
+  .mobile-menu {
+    display: flex;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-around;   
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+  }
+  
+  .bar {
+    height: 3px;
+    background: #ff5722;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+  }
+  
+  .mobile-menu.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(-45deg);
+    -webkit-transform: translateY(6px) rotate(-45deg);
+    -moz-transform: translateY(6px) rotate(-45deg);
+    -ms-transform: translateY(6px) rotate(-45deg);
+    -o-transform: translateY(6px) rotate(-45deg);
+  }
+  
+  .mobile-menu.active .bar:nth-child(2) {
+    transform: translateY(-6px) rotate(45deg);
+    -webkit-transform: translateY(-6px) rotate(45deg);
+    -moz-transform: translateY(-6px) rotate(45deg);
+    -ms-transform: translateY(-6px) rotate(45deg);
+    -o-transform: translateY(-6px) rotate(45deg);
+  }
+  
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+  
+    .mobile-menu {
+      display: flex;
+    }
+  
+    .menu {
+      padding-top: 60px;
+      display: none;
+    }
+  
+    .menu > ul > li {
+      display: block;
+      text-align: left;
+      position: relative;
+    }
+  
+    .sub-menu a:hover {
+      color: #333;
+    }
+    
+    .has-sub-menu > a {
+      /* position: static; */
+      display: inline-block;
+    }
+  
+    .has-sub-menu > a::after {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  
+    .sub-menu-wrapper {
+      position: static;
+      background: transparent;
+      flex-direction: column;
+      opacity: 1;
+      display: none;
+    }
+  
+    .has-sub-menu:hover > .sub-menu-wrapper {
+      opacity: initial;
+    }
+  
+    .sub-menu {
+      width: 100%;
+      padding: 10px 5px;
+    }
+  
+    .sub-menu-heading {
+      border-color: #fff;
+    }
+  
+    .sub-menu-wrapper a {
+      color: #fff;
+    }
+  
+  
+  }
+
+
+
+
+        <nav class="menu">
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li class="has-sub-menu"><a href="#">ABOUT</a>
+                <div class="sub-menu-wrapper">
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Team</a></li>
+                    <li><a href="#">Team 1</a></li>
+                    <li><a href="#">Team 2</a></li>
+                    <li><a href="#">Team 3</a></li>
+                    <li><a href="#">Team 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Business</a></li>
+                    <li><a href="#">Business 1</a></li>
+                    <li><a href="#">Business 2</a></li>
+                    <li><a href="#">Business 3</a></li>
+                    <li><a href="#">Business 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Timing</a></li>
+                    <li><a href="#">Timing 1</a></li>
+                    <li><a href="#">Timing 2</a></li>
+                    <li><a href="#">Timing 3</a></li>
+                    <li><a href="#">Timing 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Rules</a></li>
+                    <li><a href="#">Rule 1</a></li>
+                    <li><a href="#">Rule 2</a></li>
+                    <li><a href="#">Rule 3</a></li>
+                    <li><a href="#">Rule 4</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-sub-menu"><a href="#">PRODUCTS</a>
+                <div class="sub-menu-wrapper">
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Marques</a></li>
+                    <li><a href="#">modele 1</a></li>
+                    <li><a href="#">modele 2</a></li>
+                    <li><a href="#">modele 3</a></li>
+                    <li><a href="#">modele 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Food</a></li>
+                    <li><a href="#">Food 1</a></li>
+                    <li><a href="#">Food 2</a></li>
+                    <li><a href="#">Food 3</a></li>
+                    <li><a href="#">Food 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Cars</a></li>
+                    <li><a href="#">Car 1</a></li>
+                    <li><a href="#">Car 2</a></li>
+                    <li><a href="#">Car 3</a></li>
+                    <li><a href="#">Car 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Sports</a></li>
+                    <li><a href="#">Sports 1</a></li>
+                    <li><a href="#">Sports 2</a></li>
+                    <li><a href="#">Sports 3</a></li>
+                    <li><a href="#">Sports 4</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-sub-menu"><a href="#">OUR BLOG</a>
+                <div class="sub-menu-wrapper">
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Development</a></li>
+                    <li><a href="#">Development 1</a></li>
+                    <li><a href="#">Development 2</a></li>
+                    <li><a href="#">Development 3</a></li>
+                    <li><a href="#">Development 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Engineering</a></li>
+                    <li><a href="#">Engineering 1</a></li>
+                    <li><a href="#">Engineering 2</a></li>
+                    <li><a href="#">Engineering 3</a></li>
+                    <li><a href="#">Engineering 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>Softwares</a></li>
+                    <li><a href="#">Software 1</a></li>
+                    <li><a href="#">Software 2</a></li>
+                    <li><a href="#">Software 3</a></li>
+                    <li><a href="#">Software 4</a></li>
+                  </ul>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-heading"><a>SEO</a></li>
+                    <li><a href="#">SEO 1</a></li>
+                    <li><a href="#">SEO 2</a></li>
+                    <li><a href="#">SEO 3</a></li>
+                    <li><a href="#">SEO 4</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul>
+          </nav>

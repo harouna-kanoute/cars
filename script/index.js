@@ -1,56 +1,16 @@
-// Nav bar
+
 $(document).ready(function() {
- 
-    var hamburger = $('.mobile-menu'),
-        menu      = $('.menu'),
-        sub_menu  = $('.sub-menu-wrapper'),
-        menu_item = $('.has-sub-menu');
-    
-      hamburger.on('click', function() {
-          menu.slideToggle();
-          $(this).toggleClass('active');
-      });
-    
-      menu_item.on('click', function() {
-          $(this).children('.sub-menu-wrapper').slideToggle();
-      });
-      
+    plansite = $('.map') 
+    arrow = $('.map img')
+    blockslide = $('#blockPlanSite').hide()
+
+    plansite.on('click', function(e) {
+        blockslide.slideToggle(1000);
+
+        arrow.css({
+            "-webkit-transform": "rotate(180deg)",
+            "-moz-transform": "rotate(180deg)",
+            "transform": "rotate(180deg)" 
+        });e.preventDefault()
+    });
 });
-
-//Couressel
-var carousel = document.querySelector('.carousel');
-var container = carousel.querySelector('.carousel-container');
-var prevBtn = carousel.querySelector('.carousel-prev');
-var nextBtn = carousel.querySelector('.carousel-next');
-var pagination = carousel.querySelector('.carousel-pagination');
-var bullets = [].slice.call(carousel.querySelectorAll('.carousel-bullet'));
-var totalItems = container.querySelectorAll('.carousel-item').length;
-var percent = (100 / totalItems);
-var currentIndex = 0;
-
-function next() {
-    slideTo(currentIndex + 1);
-}
-
-function prev() {
-    slideTo(currentIndex - 1);
-}
-
-function slideTo(index) {
-    index = index < 0 ? totalItems - 1 : index >= totalItems ? 0 : index;
-    container.style.WebkitTransform = container.style.transform = 'translate(-' + (index * percent) + '%, 0)';
-    bullets[currentIndex].classList.remove('active-bullet');
-    bullets[index].classList.add('active-bullet');
-    currentIndex = index;
-}
-
-bullets[currentIndex].classList.add('active-bullet');
-prevBtn.addEventListener('click', prev, false);
-nextBtn.addEventListener('click', next, false);
-
-pagination.addEventListener('click', function(e) {
-    var index = bullets.indexOf(e.target);
-    if (index !== -1 && index !== currentIndex) {
-        slideTo(index);
-    }
-}, false);
