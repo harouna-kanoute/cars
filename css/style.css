@@ -11,12 +11,32 @@ body{
 a{
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.5em;
   color: white;
 }
 h2{
-  margin-top: 20px;
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #2c2c54;
+  font-weight: 300;
+  display: table;
+  padding-bottom: 5px;
+  position: relative;
+  margin-left : auto;
+  margin-right : auto;
 }
+
+h2:after{
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  bottom: 0;
+  left: 35%;
+  right: 35%;
+  border-bottom: 2px solid #636e72;
+}
+
 li{
   list-style: none;
   padding: 10px;
@@ -219,9 +239,11 @@ form input, form select{
   height: 400px;
   padding: 20px;
 }
-#allerPlusLoin h2{
-  text-align: right;
-  margin: 100px auto;
+#allerPlusLoin h4{
+  text-align: justify;
+  padding: 20px;
+  font-size: 0.8em;
+
 }
 .allerPlusLoin{
   display: flex;
@@ -229,21 +251,14 @@ form input, form select{
   justify-content: space-between;
 }
 .blockAllerPlus{
+  width: 100%;
   margin: 10px;
-  height: 300px;
-  display: block;
-  align-items: center;
 }
 
-.allerPlusLoin h3{
-  text-align: center;
-  color: white;
-  padding: 10px;
-}
 .allerPlusLoin button{
   width: 60%;
-  height: 60px;
-  margin: 150px auto;
+  height: 40px;
+  margin: 150px auto 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,7 +279,7 @@ form input, form select{
   height: 300px;
 }
 .allerPlusLoin .third{
-  background-image: url('../Asset/mercedes-4.jpg');
+  background-image: url('../Asset/mercedes-benz-3392793__340.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
@@ -277,7 +292,7 @@ form input, form select{
 
 /*-----------------------------------------footer---------------------------------------------*/
 footer{
-  background: #1e272e;
+  background: #636e72;
   display: block;
   margin: 200px auto 0px;
 }
@@ -291,10 +306,31 @@ footer{
   padding: 20px;
   margin: 0px auto 50px;
 }
-footer h3{
-  border-bottom: 2px solid black;
-  width: 100%;
+
+footer  h3, #planSite h3{
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #003354;
+  font-weight: 300;
+  display: table;
+  padding-bottom: 5px;
+  position: relative;
+  margin-left : auto;
+  margin-right : auto;
 }
+
+footer h3:after, #planSite h3:after{
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  bottom: 0;
+  left: 0%;
+  right: 60%;
+  border-bottom: 2px solid white;
+}
+
 #footerInfo div p{
   color: white;
   margin-top: 10px;
@@ -308,22 +344,12 @@ footer h3{
   color: white;
   background: none;
 }
-#planSite h4{
-  margin: 30px;
-  text-align: center;
-  color: black;
-  text-align: center;
-}
 #planSite a{
   color: black;
   text-align: center;
 }
-#planSite h4 img{
-  width: 1%;
-}
-.haut, .bas{
-  font-size: 1.5em;
-  font-weight: bold;
+#planSite h2 img{
+  width: 10%;
 }
 
 #footerCopyright{
@@ -344,3 +370,12 @@ footer h3{
   width: 4%;
   margin-right: 2em;
 }
+
+
+
+
+
+
+
+
+
