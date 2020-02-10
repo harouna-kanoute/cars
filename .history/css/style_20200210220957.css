@@ -284,7 +284,9 @@ form input, form select{
   background-size: cover;
   height: 300px;
 }
+.arrowDirction{
 
+}
 /*-----------------------------------------Allez Plus Loin-----------------------------------------------*/
 
 /*-----------------------------------------footer-----------------------------------------------*/
@@ -386,7 +388,7 @@ footer h3:after, #planSite h3:after{
   background-size: cover;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;align-items: center;
+  justify-content: space-between;
   height: 100%;
   margin: 0px;
 }
@@ -394,15 +396,15 @@ footer h3:after, #planSite h3:after{
   text-align: center;
 }
 .contactImage{
-  width: 100%;
+  width: 400px;
   background: none;
 }
 .containerContactForm {
   fill-opacity: 1;
+  max-width: 400px;
   width: 100%;
-  padding: 40px;
+  margin: 0 auto;
   position: relative;
-  background: rgba(72, 219, 251,0.6);
 }
 
 #contact input[type="text"],
@@ -415,10 +417,9 @@ footer h3:after, #planSite h3:after{
 }
 
 #contact {
-  width: 80%;
-  /* background: rgba(236, 240, 241,0.5); */
-  padding: 45px;
-  margin: 50px auto;
+  background: rgba(236, 240, 241,0.5);
+  padding: 25px;
+  margin: 50px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 

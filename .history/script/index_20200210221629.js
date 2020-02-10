@@ -6,9 +6,10 @@ $(document).ready(function() {
     
     plansite.on('click', function() {
         blockslide.slideToggle(1000);
-        arrow.toggleClass("arrowToggle");
+        arrow..toggleClass("arrowToggle");
     });
 });
 
+arrow.classList.toggle("arrowToggle");
 
 

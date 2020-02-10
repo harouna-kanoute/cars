@@ -10,5 +10,6 @@ $(document).ready(function() {
     });
 });
 
+arrow.classList.toggle("arrowToggle");
 
 
